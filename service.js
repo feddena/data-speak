@@ -1,7 +1,6 @@
 const { ipcRenderer } = require('electron');
 
 // ---------------- UI ----------------
-import { sendMessageClick } from './ui.js';
 import { addMessageToUI } from './ui.js';
 // ----------------INTEGRATIONS--------------
 import { askChatGPT } from './openai-api.js';

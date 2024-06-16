@@ -1,12 +1,13 @@
 {
-  "name": "data-speak-electron",
+  "name": "data-speak",
   "version": "1.0.0",
   "main": "main.mjs",
   "type": "module",
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder",
-    "package": "electron-packager . DataSpeak --platform=win32 --arch=x64 --out=dist"
+    "package": "electron-packager . DataSpeak --platform=win32 --arch=x64 --out=dist",
+    "test": "jest"
   },
   "build": {
     "appId": "com.feddena.dataspeak",
@@ -32,14 +33,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
+    "@babel/preset-env": "^7.24.7",
+    "babel-jest": "^29.7.0",
     "electron": "^31.0.1",
     "electron-builder": "^22.10.5",
-    "electron-packager": "^15.5.2"
+    "electron-packager": "^15.5.2",
+    "fetch-mock": "^10.0.5"
   },
   "dependencies": {
     "electron-store": "latest",
+    "jest": "^29.7.0",
     "prismjs": "^1.29.0"
   }
 }

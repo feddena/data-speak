@@ -15,10 +15,12 @@ import { clearState } from './ui.js'
 import { handleKeyDown } from './ui.js'
 import { openSettingsClick } from './ui.js'
 import { openPromptClick } from './ui.js'
+
 // ---------------- STATE ----------------
 import { loadMessages } from './state.js'
 import { updateDefaultMessageVisibility } from './state.js'
 import { loadCurrentQueryId } from './state.js'
+
 // ---------------- DINYMIC WINDOW SIZE ----------------
 window.addEventListener('resize', adjustChatContainerHeight);
 
