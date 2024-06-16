@@ -1,0 +1,45 @@
+{
+  "name": "data-speak-electron",
+  "version": "1.0.0",
+  "main": "main.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "package": "electron-packager . DataSpeak --platform=win32 --arch=x64 --out=dist"
+  },
+  "build": {
+    "appId": "com.feddena.dataspeak",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icons/main-icon-512.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icons/main-icon-512.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "icons/main-icon-512.png"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^31.0.1",
+    "electron-builder": "^22.10.5",
+    "electron-packager": "^15.5.2"
+  },
+  "dependencies": {
+    "electron-store": "latest",
+    "prismjs": "^1.29.0"
+  }
+}

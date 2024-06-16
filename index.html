@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Include Prism.js CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+
+<!-- Include Prism.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-sql.min.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataSpeak</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    #settings-button {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 35px;
+      right: 10px;
+    }
+    #clear-button {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 35px;
+      right: 10px;
+    }
+    #prompt-button {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 35px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container">
+    <div id="header">
+      <img id="settings-button" src="icons/settings.png" alt="Settings">
+      <img id="clear-button" src="icons/trash.png" alt="Delete">
+      <img id="prompt-button" src="icons/prompt.png" alt="Prompt">
+    </div>
+    <div id="chat-window">
+      <div id="messages"></div>
+      <div id="default-message" class="default-message">Natural language interface for database queries</div>
+      <div id="typing-indicator" class="typing-indicator" style="display: none;">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div id="input-container">
+      <textarea id="user-input" placeholder="Type your request..."></textarea>
+      <img id="send-button" src="icons/send.png" alt="Send">
+    </div>
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+</html>

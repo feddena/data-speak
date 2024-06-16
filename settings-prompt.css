@@ -1,0 +1,17 @@
+body {
+    width: 400px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    margin-bottom: 10px;
+  }
+  
+  #save-prompt-button {
+    width: 100%;
+  }
+  

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt</title>
+  <link rel="stylesheet" href="settings-prompt.css">
+  <style>
+    .prompt-setting {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="prompt-container">
+    <h1>Prompt Settings</h1>
+    <div class="prompt-setting">
+      <label for="custom-instructions-prompt">Custom Instructions Prompt</label>
+      <textarea id="custom-instructions-prompt" placeholder="Enter your custom instructions prompt&#10;- INSTRUCTION 1&#10;- INSTRUCTION 2" style="width: 400px; height: 150px;"></textarea>
+    </div>
+    <div class="prompt-setting">
+      <label for="custom-not-to-do-prompt">Custom Not To Do Prompt</label>
+      <textarea id="custom-not-to-do-prompt" placeholder="Enter your custom not to do prompt&#10;- NEVER DO SOMETHING 1&#10;- NEVER DO SOMETHING 2" style="width: 400px; height: 150px;"></textarea>
+    </div>
+    <button id="save-prompt-button">Save</button>
+  </div>
+  <script src="settings-prompt.js"></script>
+</body>
+</html>
