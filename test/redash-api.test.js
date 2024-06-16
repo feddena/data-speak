@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-const { postNewQueryToRedash, editQueryInRedash, runQueryInRedash } = require('./redash-api');
+const { postNewQueryToRedash, editQueryInRedash, runQueryInRedash } = require('../src/redash-api');
 
 // Sample data
 const apiKey = 'fakeApiKey';

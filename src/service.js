@@ -3,8 +3,8 @@ const { ipcRenderer } = require('electron');
 // ---------------- UI ----------------
 import { addMessageToUI } from './ui.js';
 // ----------------INTEGRATIONS--------------
-import { askChatGPT } from './openai-api.js';
-import { postNewQueryToRedash, runQueryInRedash, editQueryInRedash } from './redash-api.js';
+import { askChatGPT } from './src/openai-api.js';
+import { postNewQueryToRedash, runQueryInRedash, editQueryInRedash } from './src/redash-api.js';
 // ---------------- STATE ----------------
 import { saveState } from './state.js';
 import { currentQueryId } from './state.js';
