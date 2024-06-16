@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder",
-    "package": "electron-packager . DataSpeak --platform=win32 --arch=x64 --out=dist"
+    "package": "electron-packager . DataSpeak --platform=win32 --arch=x64 --out=dist",
+    "test": "jest"
   },
   "build": {
     "appId": "com.feddena.dataspeak",
@@ -36,10 +37,12 @@
   "devDependencies": {
     "electron": "^31.0.1",
     "electron-builder": "^22.10.5",
-    "electron-packager": "^15.5.2"
+    "electron-packager": "^15.5.2",
+    "fetch-mock": "^10.0.4"
   },
   "dependencies": {
     "electron-store": "latest",
+    "jest": "^29.7.0",
     "prismjs": "^1.29.0"
   }
 }
