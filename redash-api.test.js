@@ -1,4 +1,4 @@
-const fetchMock = require('fetch-mock');
+import fetchMock from 'fetch-mock';
 const { postNewQueryToRedash, editQueryInRedash, runQueryInRedash } = require('./redash-api');
 
 // Sample data
@@ -6,6 +6,8 @@ const apiKey = 'fakeApiKey';
 const query = 'SELECT * FROM table;';
 const queryId = 123;
 const baseURL = 'https://dashboard.superside.com';
+
+fetchMock.config.overwriteRoutes = true;
 
 describe('Redash API functions', () => {
 
@@ -46,16 +48,19 @@ describe('Redash API functions', () => {
     const pollingResponse = { job: { id: 'jobId', status: 3 } };
     const finalResponse = { result: 'query result' };
 
+    // Mock the initial POST request to start the query job
     fetchMock.postOnce(`${baseURL}/api/queries/${queryId}/results`, {
       body: initialResponse,
       headers: { 'content-type': 'application/json' },
     });
 
-    fetchMock.get(`${baseURL}/api/queries/${queryId}/jobs/jobId`, {
+    // Mock the GET request to poll the job status
+    fetchMock.getOnce(`${baseURL}/api/queries/${queryId}/jobs/jobId`, {
       body: pollingResponse,
       headers: { 'content-type': 'application/json' },
     });
 
+    // Mock the final POST request to get the query result
     fetchMock.postOnce(`${baseURL}/api/queries/${queryId}/results`, {
       body: finalResponse,
       headers: { 'content-type': 'application/json' },
